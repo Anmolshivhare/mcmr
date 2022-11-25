@@ -87,7 +87,7 @@
 
 
 <script src="<?php echo base_url();?>front_assets/js/jquery.validate.min.js"></script>
-<script src="<?php echo base_url();?>front_assets/js/framework7.js"></script>
+<!-- <script src="<?php echo base_url();?>front_assets/js/framework7.js"></script> -->
 <script src="<?php echo base_url();?>front_assets/js/jquery.swipebox.js"></script>
 <script src="<?php echo base_url();?>front_assets/js/jquery.fitvids.js"></script>
 <script src="<?php echo base_url();?>front_assets/js/email.js"></script>

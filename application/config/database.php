@@ -79,7 +79,7 @@ $db['default'] = array(
 	//'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'recallin_kannojapp',  
+	'database' => 'mcmr',  
 	'dbdriver' => 'mysqli',
 	
 	'dbprefix' => '',

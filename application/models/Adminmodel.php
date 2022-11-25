@@ -114,6 +114,21 @@ function product_search($search_book){
         return $query->result();
     }
 
+    function selected($tbl,$con='', $limit='', $order_by=''){
+        $this->db->select("*");
+        $this->db->from($tbl);
+        if(!empty($con))
+            $this->db->where($con);
+ if(!empty($limit))
+            $this->db->limit($limit);
+
+
+
+
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 
 
  function selectid($tbl,$con='', $limit='', $order_by=''){

@@ -219,9 +219,9 @@
                                 <span>Advocate</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li> <a href="<?php echo base_url();?>adminadvocate/add" class="">Add</a> </li>
+                                <li> <a href="<?php echo base_url();?>adminpersonal_details/add" class="">Add</a> </li>
 
-                                <li> <a href="<?php echo base_url();?>adminadvocate/list" class="">List</a> </li>
+                                <li> <a href="<?php echo base_url();?>adminpersonal_details/list" class="">List</a> </li>
 
 
                             </ul>

@@ -65,7 +65,7 @@
                                         data-view=".view-main"><img
                                             src="<?php echo base_url();?>front_assets/images/icons/white/blog.png"
                                             alt="" title=""><span>Download Information</span></a></li>
-                                <li><a href="<?php echo base_url();?>home/register" class="close-panel"
+                                <li><a href="<?php echo base_url();?>users/registration" class="close-panel"
                                         data-view=".view-main"><img
                                             src="<?php echo base_url();?>front_assets/images/icons/white/blog.png"
                                             alt="" title=""><span>Register</span></a></li>
@@ -91,9 +91,20 @@
 
             <nav class="user-nav">
                 <ul>
-                    <li><a href="<?php echo base_url();?>home/register" class="close-panel"><img
+              <?php   $admin = $this->session->all_userdata() ;
+		print_r($admin);
+		 
+		if($admin['userId']) { ?>
+                    <li><a href="<?php echo base_url();?>users/registrations" class="close-panel"><img
                                 src="<?php echo base_url();?>front_assets/images/icons/white/user.png" alt=""
                                 title=""><span>Registration</span></a></li>
+                                <?php } else { ?>
+                                    <li><a href="<?php echo base_url();?>users/login" class="close-panel"><img
+                                src="<?php echo base_url();?>front_assets/images/icons/white/user.png" alt=""
+                                title=""><span>Login</span></a></li>
+
+                                    <?php } ?>
+
                     <!-- <li><a href="#" class="close-panel"><img src="<?php echo base_url();?>front_assets/images/icons/white/briefcase.png" alt="" title=""><span>My Account</span></a></li>
                       
                       <li><a href="#" class="close-panel"><img src="<?php echo base_url();?>front_assets/images/icons/white/lock.png" alt="" title=""><span>Logout</span></a></li> -->
@@ -104,21 +115,22 @@
 
     <style>
     .home_line {
-        padding: 0.6em;
+        padding: 1em;
         background: black;
         overflow: auto;
+        font-size: 10px;
     }
     .help_header{
         float: left;
         background:blue;
-        padding: 1em;
+        padding: 0.5em;
         border-radius: 1em;
 
     }
     .help_header1{
         float: right;
         background:yellow;
-        padding: 1em;
+        padding: 0.5em;
         border-radius: 1em;
     }
     
@@ -131,11 +143,11 @@
 
             <div class="home_line">
                  
-                    <div class="help_header"> <span style="color:white;">Help +91 9084804156</span>    <img src="<?php echo base_url();?>front_assets/images/whatapp.png" alt="" width="20">  </div>
+                    <div class="help_header"> <span style="color:white;">Help +91 9084804156</span>    <img src="<?php echo base_url();?>front_assets/images/whatapp.png" alt="" width="10">  </div>
                      
                     <div class="help_header1"> 
 
-                    <a href="<?php echo base_url();?>home/personal_details" style="color:black;text-decoration:none"> 
+                    <a href="<?php echo base_url();?>home/citizenclick" style="color:black;text-decoration:none"> 
                                             <span>Citizen/Business Registration</span></a>
 
                      
@@ -153,11 +165,11 @@
 
                         <div class="navbarpages navbarpagesbg">
                             <div class="navbar_left">
-                                <div class="logo_text"><a href="<?php echo base_url();?>home/index"><img
+                                <div class="logo_text"><a href="<?php echo base_url();?>home"><img
                                             src="<?php echo base_url();?>front_assets/images/logo.png" width="100"
                                             alt="" title=""></a></div>
                             </div>
-                            <div class="navbar_right navbar_right_menu">
+                            <!-- <div class="navbar_right navbar_right_menu">
                                 <a href="#" data-panel="left" class="open-panel"><img
                                         src="<?php echo base_url();?>front_assets/images/icons/white/menu.png" alt=""
                                         title=""></a>
@@ -165,8 +177,8 @@
                                          
                             </div>
                             <div class="navbar_right">
-                                <a href="#" data-panel="right" class="open-panel"><img
+                                <a href="<?php echo base_url();?>users/logout" title="logout" data-panel="right" class="open-panel"><img
                                         src="<?php echo base_url();?>front_assets/images/icons/white/user.png" alt=""
                                         title=""></a>
-                            </div>
+                            </div> -->
                         </div>

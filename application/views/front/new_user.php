@@ -4,30 +4,29 @@
 
 <div class="page_single layout_fullwidth_padding">
 
-
-
-
+ 
     <div class="contactform">
-        <form class="" id="CustomForm" action="<?php echo base_url();?>home/advocate_register" method="post"  enctype="multipart/form-data">
+        <form class="" id="CustomForm" action="<?php echo base_url();?>home/newuser_info" method="post"  enctype="multipart/form-data">
             <div class="form_row">
                 <label>User Name:</label>
-                <input type="text" name="User_name" value="" class="form_input" />
+                <input type="text" name="user_name" value="" class="form_input" />
             </div>
             <div class="form_row">
                 <label>WhatApp No:</label>
-                <input type="text" name="WhatApp_no" value="" class="form_input" maxlength="10"/>
+                <input type="text" name="whatapp_no" value="" class="form_input" maxlength="10"/>
             </div>
             <div class="form_row">
                 <label>Address:</label>
-                <textarea name="address" class="form_textarea" rows="" cols="" required></textarea>
+                <textarea name="u_address" class="form_textarea" rows="" cols="" required></textarea>
             </div>
             <div class="form_row">
                 <label>Age:</label>
-                <input type="text" name="adv_bac_no" value="" class="form_input" />
+                <input type="text" name="u_age" value="" class="form_input" />
             </div>
             <div class="form_row">
                 <label>Create Password:</label>
-                <input type="text" name="adv_name" value="" class="form_input" required />
+                <input type="text" name="create_pass" value=""class="form_input" placeholder="mcmr@123" required />
+                   
             </div>
              
 
@@ -36,7 +35,7 @@
         </form>
     </div>
 
-
+ 
 
 </div>
 

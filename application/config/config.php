@@ -25,8 +25,8 @@ date_default_timezone_set('Asia/Kolkata');
 */
 //$config['base_url'] = '//'.$_SERVER['HTTP_HOST'].'//';
  
-$config['base_url'] = 'http://192.168.29.20/kannojapp/';
-//$config['base_url'] = 'http://localhost/kannojapp/';
+$config['base_url'] = 'http://192.168.29.20/mcmr/';
+//$config['base_url'] = 'http://localhost/mcmr/';
 
 
 /*

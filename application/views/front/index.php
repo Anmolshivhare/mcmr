@@ -88,7 +88,7 @@
             <a href="<?php echo base_url();?>home/member"><img
                     src="<?php echo base_url();?>front_assets/images/icons/blue/users.png" alt=""
                     title=""><span>Search Entire City</span></a>
-            <a href="<?php echo base_url();?>admindefault/index" data-view=".view-main"><img
+            <a href="<?php echo base_url();?>home/category" data-view=".view-main"><img
                     src="<?php echo base_url();?>front_assets/images/icons/blue/features.png" alt="" title=""><span>Contact Diary</span></a>
 
             <a href="<?php echo base_url();?>home/account" data-view=".view-main"><img
@@ -97,7 +97,7 @@
 
             <a href="<?php echo base_url()?>home/event" data-view=".view-main"><img
                     src="<?php echo base_url();?>front_assets/images/icons/blue/blog.png" alt=""
-                    title=""><span>Upload Complain/Suggestion/Apply</span></a>
+                    title=""><span>Upload Complain</span></a>
 
             <a href="<?php echo base_url(); ?>home/gallery_category" data-view=".view-main"><img
                     src="<?php echo base_url();?>front_assets/images/icons/blue/photos.png" alt=""

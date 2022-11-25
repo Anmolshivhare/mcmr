@@ -1933,7 +1933,7 @@ ul.posts li{
 	padding:10px 0 0 0;
 }
 .post_thumb{
-width:18%;
+width:25%;
 float:left;
 }
 .post_thumb img{
@@ -1941,7 +1941,7 @@ display:inline-block;
 max-width:100%;
 }
 .post_details{
-width:62%;
+width:71%;
 float:left;
 margin:0 0 0 4%;
 }
@@ -1949,7 +1949,7 @@ margin:0 0 0 4%;
 font-size:14px;
 line-height:20px;
 font-weight:400;
-margin:10px 0 10px 0;
+margin:3px 0 0 0;
 padding:0px;
 }
 .post_category a{
@@ -2370,8 +2370,8 @@ font-weight:normal;
 text-align:center;
 cursor:pointer; 
 font-size:20px;
-background-color:#0be0af;
-color:#222222;
+background-color:#24520d;
+color:#fff;
 border: none;
 cursor:pointer;
 }

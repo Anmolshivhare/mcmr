@@ -6,8 +6,12 @@ class Home extends CI_Controller {
 function __construct()  {
 		parent::__construct();
 		$this->load->model('Adminmodel');
-		$this->load->model('User');
-		date_default_timezone_set("Asia/Kolkata");
+ 		date_default_timezone_set("Asia/Kolkata");
+		$this->load->library('form_validation'); 
+        $this->load->model('user'); 
+         
+        // User login status 
+        $this->isUserLoggedIn = $this->session->userdata('isUserLoggedIn'); 
 		}
 		
 	/**
@@ -35,8 +39,9 @@ function __construct()  {
 	{
 		//session_destroy();
 		$admin = $this->session->all_userdata() ;
+		//print_r($admin);
 		$cid = $admin['data'];	
-		 
+		if($admin['userId']) {
 		$data['news']=$this->Adminmodel->select('news',['city_id'=>$cid],0,'desc');
   
 		$this->load->view('front/header', $data);
@@ -47,6 +52,9 @@ function __construct()  {
 	
 		$this->load->view('front/index', $data);
 		$this->load->view('front/footer');
+		} else {
+			redirect('users/login'); 
+		}
 	}
 	 
 	public function home()
@@ -91,6 +99,15 @@ function __construct()  {
 		$this->load->view('front/header');
 		//$data['view']=$this->Adminmodel->select('advocate',['id'=>$id]); 
 		$this->load->view('front/account');
+	
+		$this->load->view('front/footer');
+	}
+		public function citizenclick()
+	{	
+			
+		$this->load->view('front/header');
+		//$data['view']=$this->Adminmodel->select('advocate',['id'=>$id]); 
+		$this->load->view('front/citizenform');
 	
 		$this->load->view('front/footer');
 	}
@@ -362,11 +379,23 @@ function __construct()  {
 		$this->load->view('front/new_user');
 		$this->load->view('front/footer');
 	}
+	public function login()
+	{	
+		$this->load->view('front/header');
+		$this->load->view('front/login');
+		$this->load->view('front/footer');
+	}
 	public function personal_details()
 	{	
 		$this->load->view('front/header');
 		$this->load->view('front/personal_details');
-		$this->load->view('front/footer');
+ 		$this->load->view('front/footer');
+	}
+	public function business_form()
+	{	
+		$this->load->view('front/header');
+		$this->load->view('front/businessform');
+ 		$this->load->view('front/footer');
 	}
 
 
@@ -379,7 +408,33 @@ function __construct()  {
 
 
 
-	public function advocate_register(){
+	public function newuser_info(){
+       
+ 		 if(!empty($_POST)){
+										
+			$tbl="new_user";
+			$data=array(
+				'user_name'=> $this->input->post('user_name'),          
+				'whatapp_no'=> $this->input->post('whatapp_no'),          
+				'u_address'=> $this->input->post('u_address'),          
+				'u_age'=> $this->input->post('u_age'),            
+			    'create_pass'=> $this->input->post('create_pass'),          
+			     'status'=> '0',          
+			  	'create_date'=> date("Y-m-d H:i:s"),         
+			   
+			);
+ 
+		  $this->Adminmodel->insert($tbl, $data);
+		  // $data['msg']='Data Insert Successfully';
+		//   redirect("home/thanks");
+		  
+		   $this->session->set_flashdata('msg', 'Data Insert Successfully');
+ 		}
+		 redirect("home/new_user");
+ 		}
+
+	
+		public function advocate_register(){
        
  		 if(!empty($_POST)){
 		  
