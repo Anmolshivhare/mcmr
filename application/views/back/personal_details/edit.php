@@ -268,6 +268,105 @@
                                                 </div>
 
                                             </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Business/ferm/service name 
+                                                    </label>
+
+                                                    <input type="text" name="service_name" class="form-control"
+                                                        value="<?php echo $update[0]->service_name?>"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Business/Service Timing:
+
+                                                    <input type="text" name="time" class="form-control"
+                                                        value="<?php echo $update[0]->time?>"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Business/service weekly off:
+                                                    </label>
+
+                                                    <input type="text" name="weekly_off" class="form-control"
+                                                        value="<?php echo $update[0]->?>weekly_off"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Business/service specialty:
+                                                    </label>
+
+                                                    <input type="text" name="service_add" class="form-control"
+                                                        value="<?php echo $update[0]->?>service_add"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Full addess with landmark:</label>
+
+                                                    <textarea type="text" name="full_add" class="form-control"
+                                                        value=""
+                                                        id="formrow-email-input"><?php echo $update[0]->full_add?></textarea>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Contact details:
+                                                    </label>
+
+                                                    <input type="text" name="b_phone" class="form-control"
+                                                        value="<?php echo $update[0]->b_phone?>"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Proprietor/Owner name:
+                                                    </label>
+
+                                                    <input type="text" name="owner_name" class="form-control"
+                                                        value="<?php echo $update[0]->owner_name?>"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+
                                              <div class="col-md-6">
 
                                                 <div class="mb-3">

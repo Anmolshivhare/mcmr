@@ -46,7 +46,7 @@
 
                     <div class="card-body">
 
-                        <h4 class="card-title">Add advocate</h4>
+                        <h4 class="card-title">Add Persoanl/Business details</h4>
 
                         <div class="row">
 
@@ -93,7 +93,7 @@
 
                                                     <label class="form-label"
                                                         for="formrow-password-input">Designation</label>
- 
+
                                                     <input type="text" name="u_des" class="form-control"
                                                         id="formrow-email-input">
 
@@ -108,7 +108,7 @@
 
                                                     <label class="form-label" for="formrow-password-input"> Father's
                                                         Name</label>
-                                                     <input type="text" name="u_f_name" class="form-control"
+                                                    <input type="text" name="u_f_name" class="form-control"
                                                         id="formrow-email-input">
                                                 </div>
 
@@ -244,7 +244,8 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Are you want a Media Mitra Card (Press reporting)</label>
+                                                    <label class="form-label" for="formrow-email-input">Are you want a
+                                                        Media Mitra Card (Press reporting)</label>
 
                                                     <input type="text" name="u_mitra_card" class="form-control"
                                                         id="formrow-email-input">
@@ -253,7 +254,104 @@
 
                                             </div>
 
- 
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label"
+                                                        for="formrow-email-input">Business/ferm/service name</label>
+
+                                                    <input type="text" name="service_name" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Business/Service Timing:</label>
+
+                                                    <input type="text" name="time" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Business/service weekly off:
+                                                    </label>
+
+                                                    <input type="text" name="weekly_off" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Business/service specialty:</label>
+
+                                                    <input type="text" name="service_add" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Full addess with landmark:</label>
+
+                                                    <textarea type="text" name="full_add" class="form-control"
+                                                        id="formrow-email-input" rows="1"></textarea>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Contact details:</label>
+
+                                                    <input type="text" name="b_phone" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">
+                                                        Proprietor/Owner name:
+                                                    </label>
+
+                                                    <input type="text" name="owner_name" class="form-control"
+                                                        id="formrow-email-input">
+
+                                                </div>
+
+                                            </div>
+
+
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">

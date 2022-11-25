@@ -216,7 +216,7 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="uil-window-section"></i>
-                                <span>Advocate</span>
+                                <span>Persoanl/Business</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li> <a href="<?php echo base_url();?>adminpersonal_details/add" class="">Add</a> </li>
