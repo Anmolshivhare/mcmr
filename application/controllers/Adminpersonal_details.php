@@ -13,8 +13,7 @@ class Adminpersonal_details extends CI_Controller {
         redirect(base_url().'Admin/index');
      } 
   
-  }
-
+  } 
   
       public function add(){
         //print_r($_POST);die;
@@ -23,8 +22,11 @@ class Adminpersonal_details extends CI_Controller {
  
              	$tbl="users";
             	$data=array(
-                   'first_name'=> $this->input->post('first_name'),          
-                   'email'=> $this->input->post('email'),          
+                  'first_name'=> $this->input->post('first_name'),          
+                  'last_name'=> $this->input->post('last_name'),          
+                  'email'=> $this->input->post('email'),          
+                  'password'=> $this->input->post('password'),          
+                  'gender'=> $this->input->post('gender'),          
                   'phone'=> $this->input->post('phone'),            
                   'u_des'=> $this->input->post('u_des'),          
                   'u_f_name'=> $this->input->post('u_f_name'),          
@@ -33,20 +35,28 @@ class Adminpersonal_details extends CI_Controller {
                   'u_f_resident'=> $this->input->post('u_f_resident'),          
                   'u_landmark'=> $this->input->post('u_landmark'),          
                   'u_pincode'=> $this->input->post('u_pincode'),          
-                   'u_blood'=> $this->input->post('u_blood'),          
+                  'u_blood'=> $this->input->post('u_blood'),          
                   'u_socialwork'=> $this->input->post('u_socialwork'),          
-                   'u_mitra_card'=> $this->input->post('u_mitra_card'),          
+                  'u_mitra_card'=> $this->input->post('u_mitra_card'),          
+                  'service_name'=> $this->input->post('service_name'),          
+                  'time'=> $this->input->post('time'),          
+                  'weekly_off'=> $this->input->post('weekly_off'),          
+                  'service_add'=> $this->input->post('service_add'),          
+                  'full_add'=> $this->input->post('full_add'),          
+                  'b_phone'=> $this->input->post('b_phone'),          
+                  'owner_name'=> $this->input->post('owner_name'),          
                   'status'=> $this->input->post('status'),          
-                //   'created'=> date("Y-m-d H:i:s"),         
+                  'modified'=> $this->input->post('modified'),          
+                  'created'=> date("Y-m-d H:i:s"),         
                    
             	);
 
                if(!empty($_FILES)){
                         
                   $uploadPath = 'upload_images/';
-                $config['encrypt_name'] = TRUE; 
+                  $config['encrypt_name'] = TRUE; 
                   $config['upload_path'] = $uploadPath;
-                   $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
+                  $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
                   $this->load->library('upload', $config);
                   $this->upload->initialize($config);
                   if($this->upload->do_upload('u_photo')){
@@ -100,33 +110,41 @@ class Adminpersonal_details extends CI_Controller {
      
    if (!empty($_POST)) {
       
-         $data = array(
-
-                  'first_name'=> $this->input->post('first_name'),          
-                  'email'=> $this->input->post('email'),          
-                  'phone'=> $this->input->post('phone'),            
-                  'u_des'=> $this->input->post('u_des'),          
-                  'u_f_name'=> $this->input->post('u_f_name'),          
-                  'u_dob'=> $this->input->post('u_dob'),          
-                  'u_phone'=> $this->input->post('u_phone'),          
-                  'u_f_resident'=> $this->input->post('u_f_resident'),          
-                  'u_landmark'=> $this->input->post('u_landmark'),          
-                  'u_pincode'=> $this->input->post('u_pincode'),          
-                   'u_blood'=> $this->input->post('u_blood'),          
-                  'u_socialwork'=> $this->input->post('u_socialwork'),          
-                   'u_mitra_card'=> $this->input->post('u_mitra_card'),          
-                  'status'=> $this->input->post('status'),          
-                //   'created'=> date("Y-m-d H:i:s"),          
-             
-                     
-      
-       );
+      $data=array(
+            'first_name'=> $this->input->post('first_name'),          
+            'last_name'=> $this->input->post('last_name'),          
+            'email'=> $this->input->post('email'),          
+            'password'=> $this->input->post('password'),          
+            'gender'=> $this->input->post('gender'),          
+            'phone'=> $this->input->post('phone'),            
+            'u_des'=> $this->input->post('u_des'),          
+            'u_f_name'=> $this->input->post('u_f_name'),          
+            'u_dob'=> $this->input->post('u_dob'),          
+            'u_phone'=> $this->input->post('u_phone'),          
+            'u_f_resident'=> $this->input->post('u_f_resident'),          
+            'u_landmark'=> $this->input->post('u_landmark'),          
+            'u_pincode'=> $this->input->post('u_pincode'),          
+            'u_blood'=> $this->input->post('u_blood'),          
+            'u_socialwork'=> $this->input->post('u_socialwork'),          
+            'u_mitra_card'=> $this->input->post('u_mitra_card'),          
+            'service_name'=> $this->input->post('service_name'),          
+            'time'=> $this->input->post('time'),          
+            'weekly_off'=> $this->input->post('weekly_off'),          
+            'service_add'=> $this->input->post('service_add'),          
+            'full_add'=> $this->input->post('full_add'),          
+            'b_phone'=> $this->input->post('b_phone'),          
+            'owner_name'=> $this->input->post('owner_name'),          
+            'status'=> $this->input->post('status'),          
+            'modified'=> $this->input->post('modified'),          
+            'created'=> date("Y-m-d H:i:s"),         
+            
+        );
         
        if(!empty($_FILES)){
            $uploadPath = 'upload_images/';
-       $config['encrypt_name'] = TRUE; 
+           $config['encrypt_name'] = TRUE; 
            $config['upload_path'] = $uploadPath;
-             $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
+           $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
            $this->load->library('upload', $config);
            $this->upload->initialize($config);
            if($this->upload->do_upload('u_photo')){
@@ -165,35 +183,42 @@ class Adminpersonal_details extends CI_Controller {
 public function userupdate($id){
   // $this->checklogin();
   
-if (!empty($_POST)) {
-   
-      $data = array(
-
-                'first_name'=> $this->input->post('first_name'),          
-                // 'email'=> $this->input->post('email'),          
-                'phone'=> $this->input->post('phone'),            
-               'u_des'=> $this->input->post('u_des'),          
-               'u_f_name'=> $this->input->post('u_f_name'),          
-               'u_dob'=> $this->input->post('u_dob'),          
-               'u_phone'=> $this->input->post('u_phone'),          
-               'u_f_resident'=> $this->input->post('u_f_resident'),          
-               'u_landmark'=> $this->input->post('u_landmark'),          
-               'u_pincode'=> $this->input->post('u_pincode'),          
-                'u_blood'=> $this->input->post('u_blood'),          
-               'u_socialwork'=> $this->input->post('u_socialwork'),          
-                'u_mitra_card'=> $this->input->post('u_mitra_card'),          
-               'status'=> $this->input->post('status'),          
-             //   'created'=> date("Y-m-d H:i:s"),          
+      if (!empty($_POST)) {
+                 $data=array(
+                    'first_name'=> $this->input->post('first_name'),          
+                    'last_name'=> $this->input->post('last_name'),          
+                    'email'=> $this->input->post('email'),          
+                    'password'=> $this->input->post('password'),          
+                    'gender'=> $this->input->post('gender'),          
+                    'phone'=> $this->input->post('phone'),            
+                    'u_des'=> $this->input->post('u_des'),          
+                    'u_f_name'=> $this->input->post('u_f_name'),          
+                    'u_dob'=> $this->input->post('u_dob'),          
+                    'u_phone'=> $this->input->post('u_phone'),          
+                    'u_f_resident'=> $this->input->post('u_f_resident'),          
+                    'u_landmark'=> $this->input->post('u_landmark'),          
+                    'u_pincode'=> $this->input->post('u_pincode'),          
+                    'u_blood'=> $this->input->post('u_blood'),          
+                    'u_socialwork'=> $this->input->post('u_socialwork'),          
+                    'u_mitra_card'=> $this->input->post('u_mitra_card'),          
+                    'service_name'=> $this->input->post('service_name'),          
+                    'time'=> $this->input->post('time'),          
+                    'weekly_off'=> $this->input->post('weekly_off'),          
+                    'service_add'=> $this->input->post('service_add'),          
+                    'full_add'=> $this->input->post('full_add'),          
+                    'b_phone'=> $this->input->post('b_phone'),          
+                    'owner_name'=> $this->input->post('owner_name'),          
+                    'status'=> $this->input->post('status'),          
+                    'modified'=> $this->input->post('modified'),          
+                    'created'=> date("Y-m-d H:i:s"),         
           
-                  
-   
-    );
+                  );
      
     if(!empty($_FILES)){
         $uploadPath = 'upload_images/';
-    $config['encrypt_name'] = TRUE; 
+        $config['encrypt_name'] = TRUE; 
         $config['upload_path'] = $uploadPath;
-          $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
+        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if($this->upload->do_upload('u_photo')){
