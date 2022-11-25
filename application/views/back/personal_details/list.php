@@ -95,7 +95,7 @@
                                     <td><?php echo $view->first_name;?></td>
                                     <td>
                                         <img src="<?php echo base_url();?>upload_images/<?php echo $view->u_photo;?>"
-                                            width="100">
+                                            width="50px">
                                     </td>
 
                                     <td><?php echo $view->phone;?></td>
