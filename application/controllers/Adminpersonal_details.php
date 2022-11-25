@@ -1,4 +1,4 @@
-<?php ini_set('display_errors',0);
+<?php ini_set('display_errors',1);
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Adminpersonal_details extends CI_Controller {
 	function __construct()  {
@@ -46,7 +46,7 @@ class Adminpersonal_details extends CI_Controller {
                   'b_phone'=> $this->input->post('b_phone'),          
                   'owner_name'=> $this->input->post('owner_name'),          
                   'status'=> $this->input->post('status'),          
-                  'modified'=> $this->input->post('modified'),          
+                            
                   'created'=> date("Y-m-d H:i:s"),         
                    
             	);
@@ -135,7 +135,7 @@ class Adminpersonal_details extends CI_Controller {
             'b_phone'=> $this->input->post('b_phone'),          
             'owner_name'=> $this->input->post('owner_name'),          
             'status'=> $this->input->post('status'),          
-            'modified'=> $this->input->post('modified'),          
+                     
             'created'=> date("Y-m-d H:i:s"),         
             
         );
@@ -209,7 +209,7 @@ public function userupdate($id){
                     'b_phone'=> $this->input->post('b_phone'),          
                     'owner_name'=> $this->input->post('owner_name'),          
                     'status'=> $this->input->post('status'),          
-                    'modified'=> $this->input->post('modified'),          
+                              
                     'created'=> date("Y-m-d H:i:s"),         
           
                   );

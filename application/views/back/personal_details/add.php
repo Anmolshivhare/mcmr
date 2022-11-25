@@ -258,6 +258,46 @@
 
                                                 <div class="mb-3">
 
+                                                    <label class="form-label" for="formrow-password-input">Select Business/Category:
+                                                    </label>
+ 
+                                                    <select class="form-select" name="city_id">
+                                                        <?php   $city = $this->Adminmodel->select('city','',0,'desc');
+                                                         foreach($city as $view) { ?>
+                                                        <option value="<?php echo  $view->id;?>">
+                                                            <?php echo  $view->c_name;?></option>
+
+                                                        <?php } ?>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-password-input">Business service/Class:
+                                                    </label>
+ 
+                                                    <select class="form-select" name="city_id">
+                                                        <?php   $city = $this->Adminmodel->select('city','',0,'desc');
+                                                         foreach($city as $view) { ?>
+                                                        <option value="<?php echo  $view->id;?>">
+                                                            <?php echo  $view->c_name;?></option>
+
+                                                        <?php } ?>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
                                                     <label class="form-label"
                                                         for="formrow-email-input">Business/ferm/service name</label>
 

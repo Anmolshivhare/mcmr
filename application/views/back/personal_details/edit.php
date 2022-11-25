@@ -124,14 +124,13 @@
                                                     </label>
 
                                                     <input type="text" name="u_des" class="form-control"
-                                                        value="<?php echo $update[0]->u_des?>"
-                                                        id="formrow-email-input">
+                                                        value="<?php echo $update[0]->u_des?>" id="formrow-email-input">
 
                                                 </div>
 
                                             </div>
-                                            
- 
+
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
@@ -155,7 +154,7 @@
 
                                                     <input type="text" name="u_dob" class="form-control"
                                                         id="formrow-email-input" value="<?php echo $update[0]->u_dob?>">
-                                                    
+
 
                                                 </div>
 
@@ -176,15 +175,15 @@
                                                 </div>
 
                                             </div>
-                                            
-                                             
+
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
 
                                                     <label class="form-label" for="formrow-email-input">Landmark
-                                                      
-                                                       </label>
+
+                                                    </label>
 
                                                     <input type="text" name="u_landmark" class="form-control"
                                                         value="<?php echo $update[0]->u_landmark?>"
@@ -198,8 +197,8 @@
                                                 <div class="mb-3">
 
                                                     <label class="form-label" for="formrow-email-input">Pincode
-                                                      
-                                                       </label>
+
+                                                    </label>
 
                                                     <input type="text" name="u_pincode" class="form-control"
                                                         value="<?php echo $update[0]->u_pincode?>"
@@ -213,19 +212,20 @@
                                                 <div class="mb-3">
 
                                                     <label class="form-label" for="formrow-email-input">Upload Photo
-                                                      
-                                                       </label>
+
+                                                    </label>
 
                                                     <input type="file" name="u_photo" class="form-control"
                                                         value="<?php echo $update[0]->u_photo?>"
                                                         id="formrow-email-input">
-                                                        <img src="<?php echo base_url()?>upload_images/<?php echo $update[0]->u_photo;?>" width="50" alt="">
-                                                         
+                                                    <img src="<?php echo base_url()?>upload_images/<?php echo $update[0]->u_photo;?>"
+                                                        width="50" alt="">
+
 
                                                 </div>
 
                                             </div>
-                                            
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
@@ -244,7 +244,8 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Are you want to be a registered Social worker
+                                                    <label class="form-label" for="formrow-email-input">Are you want to
+                                                        be a registered Social worker
                                                     </label>
 
                                                     <input type="text" name="u_socialwork" class="form-control"
@@ -258,7 +259,8 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Are you want a Media Mitra Card (Press reporting)
+                                                    <label class="form-label" for="formrow-email-input">Are you want a
+                                                        Media Mitra Card (Press reporting)
                                                     </label>
 
                                                     <input type="text" name="u_mitra_card" class="form-control"
@@ -273,7 +275,93 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Business/ferm/service name 
+                                                    <label class="form-label" for="formrow-email-input">Select Business/Category:
+                                                        </label>
+
+
+
+
+
+                                                    <select class="form-select" name="city_id">
+
+                                                        <option value="<?php echo $update[0]->city_id?>">
+
+                                                            <?php 
+                                                                $ct_id =  $update[0]->city_id;
+                                                                
+                                                                $sqll= "SELECT * FROM city WHERE id='$ct_id'"; 
+                                                              
+                                                                $sql = $this->db->query($sqll);
+                                                              
+                                                                $query= $sql->result();
+                                                               // print_r($query);
+                                                                if(isset($query[0]->c_name)) {
+                                                                echo $query[0]->c_name;
+                                                                }
+                                                                ?>
+
+                                                        </option>
+
+                                                        <?php   $city = $this->Adminmodel->select('city','',0,'desc');
+                                                        foreach($city as $viewstate) { ?>
+                                                        <option value="<?php echo  $viewstate->id;?>">
+                                                            <?php echo  $viewstate->c_name;?></option>
+
+                                                        <?php } ?>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label" for="formrow-email-input">Business service/Class:
+                                                        </label>
+
+
+
+
+
+                                                    <select class="form-select" name="city_id">
+
+                                                        <option value="<?php echo $update[0]->city_id?>">
+
+                                                            <?php 
+                                                                $ct_id =  $update[0]->city_id;
+                                                                
+                                                                $sqll= "SELECT * FROM city WHERE id='$ct_id'"; 
+                                                              
+                                                                $sql = $this->db->query($sqll);
+                                                              
+                                                                $query= $sql->result();
+                                                               // print_r($query);
+                                                                if(isset($query[0]->c_name)) {
+                                                                echo $query[0]->c_name;
+                                                                }
+                                                                ?>
+
+                                                        </option>
+
+                                                        <?php   $city = $this->Adminmodel->select('city','',0,'desc');
+                                                        foreach($city as $viewstate) { ?>
+                                                        <option value="<?php echo  $viewstate->id;?>">
+                                                            <?php echo  $viewstate->c_name;?></option>
+
+                                                        <?php } ?>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="mb-3">
+
+                                                    <label class="form-label"
+                                                        for="formrow-email-input">Business/ferm/service name
                                                     </label>
 
                                                     <input type="text" name="service_name" class="form-control"
@@ -283,28 +371,31 @@
                                                 </div>
 
                                             </div>
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Business/Service Timing:
+                                                    <label class="form-label" for="formrow-email-input">Business/Service
+                                                        Timing: </label>
 
                                                     <input type="text" name="time" class="form-control"
-                                                        value="<?php echo $update[0]->time?>"
-                                                        id="formrow-email-input">
+                                                        value="<?php echo $update[0]->time?>" id="formrow-email-input">
 
                                                 </div>
 
                                             </div>
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Business/service weekly off:
+                                                    <label class="form-label" for="formrow-email-input">Business/service
+                                                        weekly off:
                                                     </label>
 
                                                     <input type="text" name="weekly_off" class="form-control"
-                                                        value="<?php echo $update[0]->?>weekly_off"
+                                                        value="<?php echo $update[0]->weekly_off?>"
                                                         id="formrow-email-input">
 
                                                 </div>
@@ -314,11 +405,12 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Business/service specialty:
+                                                    <label class="form-label" for="formrow-email-input">Business/service
+                                                        specialty:
                                                     </label>
 
                                                     <input type="text" name="service_add" class="form-control"
-                                                        value="<?php echo $update[0]->?>service_add"
+                                                        value="<?php echo $update[0]->service_add?>"
                                                         id="formrow-email-input">
 
                                                 </div>
@@ -328,9 +420,10 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Full addess with landmark:</label>
+                                                    <label class="form-label" for="formrow-email-input">Full addess with
+                                                        landmark:</label>
 
-                                                    <textarea type="text" name="full_add" class="form-control"
+                                                    <textarea type="text" name="full_add" rows="1" class="form-control"
                                                         value=""
                                                         id="formrow-email-input"><?php echo $update[0]->full_add?></textarea>
 
@@ -351,12 +444,13 @@
                                                 </div>
 
                                             </div>
-                                            
+
                                             <div class="col-md-6">
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label" for="formrow-email-input">Proprietor/Owner name:
+                                                    <label class="form-label" for="formrow-email-input">Proprietor/Owner
+                                                        name:
                                                     </label>
 
                                                     <input type="text" name="owner_name" class="form-control"
@@ -367,7 +461,7 @@
 
                                             </div>
 
-                                             <div class="col-md-6">
+                                            <div class="col-md-6">
 
                                                 <div class="mb-3">
 
