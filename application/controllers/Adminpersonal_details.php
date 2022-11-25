@@ -1,4 +1,4 @@
-<?php ini_set('display_errors',1);
+<?php ini_set('display_errors',);
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Adminpersonal_details extends CI_Controller {
 	function __construct()  {

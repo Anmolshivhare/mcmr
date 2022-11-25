@@ -319,11 +319,7 @@
 
                                                     <label class="form-label" for="formrow-email-input">Business service/Class:
                                                         </label>
-
-
-
-
-
+ 
                                                     <select class="form-select" name="city_id">
 
                                                         <option value="<?php echo $update[0]->city_id?>">
